@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+h2{
+    font-size: 64px;
+    font-weight: bold;
+    text-align: center;
+}
+.box-sizing{
+    width: 700px;
+    height: 700px;
+    background: purple;
+    margin: auto;
+    /******* bringing center using flex *******/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    /******* using Grid ******/
+    /* display: grid;
+    place-content: center; */
+
+       /******* using position & transform ******/
+       /* position: relative; */
+}
+.content-box{
+    background: red;
+    width: 200px;
+    height: 200px;
+    box-sizing: content-box;
+    padding: 50px;
+
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+.border-box{
+    background: green;
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    padding: 50px;
+} 
+
+/* Position With Z-index */
+.flag-green{
+    width: 500px;
+    height: 300px;
+    background: green;
+    position: relative;
+}
+.flag-rounded-red{
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-70%, -50%);
+    z-index: 3;
+}
+.flag-rounded-white{
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    z-index: 2;
+}
